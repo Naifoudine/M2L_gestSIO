@@ -25,15 +25,13 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import fr.rb.gestsio.R;
-
 /**
  * Activity for entering a etudiant.
  */
 
 public class NewEtudiantActivity extends AppCompatActivity {
 
-    public static final String EXTRA_REPLY_NEW = "fr.rb.gestsio.REPLY_NEW";
+    public static final String EXTRA_REPLY_NEW = "fr.equipe4.gestsio.REPLY_NEW";
 
     private EditText mEditNomView;
     private EditText mEditPrenomView;

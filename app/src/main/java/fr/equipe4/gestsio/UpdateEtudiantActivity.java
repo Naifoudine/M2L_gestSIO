@@ -25,15 +25,13 @@ import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import fr.rb.gestsio.R;
-
 /**
  * Activity for updating a student.
  */
 
 public class UpdateEtudiantActivity extends AppCompatActivity {
 
-    public static final String EXTRA_REPLY_UPDATE = "fr.rb.gestsio.REPLY_UPDATE";
+    public static final String EXTRA_REPLY_UPDATE = "fr.equipe4.gestsio.REPLY_UPDATE";
 
     private EditText mEditNomView;
     private EditText mEditPrenomView;

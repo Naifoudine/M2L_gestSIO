@@ -18,8 +18,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-import fr.rb.gestsio.R;
-
 
 public class MainActivity extends AppCompatActivity {
 

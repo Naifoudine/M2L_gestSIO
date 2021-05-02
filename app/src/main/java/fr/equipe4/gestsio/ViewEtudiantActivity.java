@@ -13,7 +13,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.List;
 
-import fr.rb.gestsio.R;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -36,7 +35,7 @@ public class ViewEtudiantActivity extends AppCompatActivity  {
     private TextView textViewResult;
 
 
-    public static final String EXTRA_REPLY_VIEW = "fr.rb.gestsio.REPLY_VIEW";
+    public static final String EXTRA_REPLY_VIEW = "fr.equipe4.gestsio.REPLY_VIEW";
 
 
     //@Override
@@ -66,7 +65,7 @@ public class ViewEtudiantActivity extends AppCompatActivity  {
         textViewResult = findViewById(R.id.textViewAppreciation);
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.56.1/PPE/MyApi/")
+                .baseUrl("http://165.169.241.28:21195/MyApi/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
