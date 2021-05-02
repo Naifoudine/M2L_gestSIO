@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">GestSIO</string>
+    <string name="consultation_etudiant">Consultation étudiant</string>
+    <string name="nom">Nom :</string>
+    <string name="nom_etudiant">Nom de l\'étudiant</string>
+    <string name="prenom">Prénom :</string>
+    <string name="prenom_etudiant">Prénom de l\'étudiant</string>
+    <string name="add_etudiant">Ajout étudiant</string>
+    <string name="view_etudiant">Consultation étudiant</string>
+    <string name="ok">OK</string>
+    <string name="naissanceEtudiant">02/12/1980</string>
+    <string name="adresseEtudiant">14 allée Véronèse</string>
+    <string name="cpEtudiant">97410</string>
+    <string name="villeEtudiant">SAINT-PIERRE</string>
+    <string name="telEtudiant">06 92 34 67 89</string>
+    <string name="courrielEtudiant">etudiant@mail.com</string>
+    <string name="observationsEtudiant">quelques remarques</string>
+
+    <string name="action_settings">Options</string>
+    <string name="hint_nom">Nom…</string>
+    <string name="hint_prenom">Prénom…</string>
+    <string name="button_save">Sauvegarder</string>
+    <string name="saved">Etudiant sauvegardé.</string>
+    <string name="not_saved">Etudiant non sauvegardé</string>
+    <string name="add_student">Ajout étudiant</string>
+    <string name="hint_naissance">Date de naissance...</string>
+    <string name="hint_adresse">Adresse...</string>
+    <string name="hint_cp">Code postale...</string>
+    <string name="hint_ville">Ville...</string>
+    <string name="hint_tel">Téléphone...</string>
+    <string name="hint_courriel">Courriel...</string>
+    <string name="hint_observations">Observations...</string>
+    <string name="button_modifier">MODIFIER</string>
+    <string name="button_supprimer">SUPPRIMER</string>
+    <string name="confirmation">Etes-vous sûr ?</string>
+    <string name="oui">Oui</string>
+    <string name="non">Non</string>
+    <string name="del_etudiant">Etudiant supprimé</string>
+    <string name="updated">Etudiant mis à jour</string>
+    <string name="deleted">Etudiant supprimé</string>
+    <string name="hint_spe">Spécialité...</string>
+</resources>

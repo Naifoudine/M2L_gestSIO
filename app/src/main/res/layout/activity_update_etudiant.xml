@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Copyright 2017 Google Inc.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License. -->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/editNom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/min_height"
+            android:fontFamily="sans-serif-light"
+            android:hint="@string/hint_nom"
+            android:inputType="textAutoComplete"
+            android:layout_margin="@dimen/small_padding"
+            android:textSize="18sp"
+            android:autofillHints="" />
+
+        <EditText
+            android:id="@+id/editPrenom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/min_height"
+            android:fontFamily="sans-serif-light"
+            android:hint="@string/hint_prenom"
+            android:inputType="textAutoComplete"
+            android:layout_margin="@dimen/small_padding"
+            android:textSize="18sp"
+            android:autofillHints="" />
+
+        <EditText
+            android:id="@+id/editNaissanceEtudiant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/min_height"
+            android:fontFamily="sans-serif-light"
+            android:hint="@string/hint_naissance"
+            android:inputType="textAutoComplete"
+            android:layout_margin="@dimen/small_padding"
+            android:textSize="18sp"
+            android:autofillHints="" />
+
+        <EditText
+            android:id="@+id/editSpeEtudiant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/min_height"
+            android:fontFamily="sans-serif-light"
+            android:hint="@string/hint_spe"
+            android:inputType="textAutoComplete"
+            android:layout_margin="@dimen/small_padding"
+            android:textSize="18sp"
+            android:autofillHints="" />
+
+        <EditText
+            android:id="@+id/editAdresseEtudiant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/min_height"
+            android:fontFamily="sans-serif-light"
+            android:hint="@string/hint_adresse"
+            android:inputType="textAutoComplete"
+            android:layout_margin="@dimen/small_padding"
+            android:textSize="18sp"
+            android:autofillHints="" />
+
+        <EditText
+            android:id="@+id/editCpEtudiant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/min_height"
+            android:fontFamily="sans-serif-light"
+            android:hint="@string/hint_cp"
+            android:inputType="textAutoComplete"
+            android:layout_margin="@dimen/small_padding"
+            android:textSize="18sp"
+            android:autofillHints="" />
+
+        <EditText
+            android:id="@+id/editVilleEtudiant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/min_height"
+            android:fontFamily="sans-serif-light"
+            android:hint="@string/hint_ville"
+            android:layout_margin="@dimen/small_padding"
+            android:textSize="18sp"
+            android:inputType="textCapCharacters"
+            android:autofillHints="" />
+
+        <EditText
+            android:id="@+id/editTelEtudiant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/min_height"
+            android:fontFamily="sans-serif-light"
+            android:hint="@string/hint_tel"
+            android:layout_margin="@dimen/small_padding"
+            android:textSize="18sp"
+            android:inputType="phone"
+            android:autofillHints="" />
+
+        <EditText
+            android:id="@+id/editCourrielEtudiant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/min_height"
+            android:fontFamily="sans-serif-light"
+            android:hint="@string/hint_courriel"
+            android:layout_margin="@dimen/small_padding"
+            android:textSize="18sp"
+            android:inputType="textEmailAddress"
+            android:autofillHints="" />
+
+        <EditText
+            android:id="@+id/editObservationsEtudiant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/min_height"
+            android:fontFamily="sans-serif-light"
+            android:hint="@string/hint_observations"
+            android:layout_margin="@dimen/small_padding"
+            android:textSize="18sp"
+            android:inputType="textMultiLine"
+            android:autofillHints="" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="@string/button_save"
+            android:layout_margin="@dimen/big_padding"
+            android:textColor="@color/buttonLabel" />
+
+    </LinearLayout>
+
+</ScrollView>
