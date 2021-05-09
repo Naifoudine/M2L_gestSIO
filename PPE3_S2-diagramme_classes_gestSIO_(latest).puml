@@ -1,0 +1,169 @@
+@startuml
+class fr.equipe4.gestsio.UpdateEtudiantActivity {
++ {static} String EXTRA_REPLY_UPDATE
+- EditText mEditNomView
+- EditText mEditPrenomView
+- EditText mEditNaissanceView
+- EditText mEditSpeView
+- EditText mEditAdresseView
+- EditText mEditCpView
+- EditText mEditVilleView
+- EditText mEditTelView
+- EditText mEditCourrielView
+- EditText mEditObservationsView
+- Etudiant etudiant
++ void onCreate(Bundle)
+- void loadEtudiant(Etudiant)
+}
+class fr.equipe4.gestsio.EtudiantRepository {
+- EtudiantDao mEtudiantDao
+- LiveData<List<Etudiant>> mAllEtudiants
+~ LiveData<List<Etudiant>> getAllEtudiants()
+~ void insert(Etudiant)
+~ void update(Etudiant)
++ void delete(Etudiant)
+}
+class fr.equipe4.gestsio.Etudiant {
+- int mIdEtudiant
+- String mNomEtudiant
+- String mPrenomEtudiant
+- String mNaissanceEtudiant
+- String mSpeEtudiant
+- String mAdresseEtudiant
+- String mCpEtudiant
+- String mVilleEtudiant
+- String mTelEtudiant
+- String mCourrielEtudiant
+- String mObservationsEtudiant
++ int getIdEtudiant()
++ void setIdEtudiant(int)
++ String getNomEtudiant()
++ void setNomEtudiant(String)
++ String getPrenomEtudiant()
++ void setPrenomEtudiant(String)
++ String getNaissanceEtudiant()
++ void setNaissanceEtudiant(String)
++ String getSpeEtudiant()
++ void setSpeEtudiant(String)
++ String getAdresseEtudiant()
++ void setAdresseEtudiant(String)
++ String getCpEtudiant()
++ void setCpEtudiant(String)
++ String getVilleEtudiant()
++ void setVilleEtudiant(String)
++ String getTelEtudiant()
++ void setTelEtudiant(String)
++ String getCourrielEtudiant()
++ void setCourrielEtudiant(String)
++ String getObservationsEtudiant()
++ void setObservationsEtudiant(String)
+}
+interface fr.equipe4.gestsio.EtudiantDao {
+~ LiveData<List<Etudiant>> getAlphabetizedEtudiants()
+~ void insert(Etudiant)
+~ void update(Etudiant)
+~ void delete(Etudiant)
+~ LiveData<List<Etudiant>> loadAllByIds(int[])
+~ Etudiant findByName(String,String)
+~ void deleteAll()
+}
+class fr.equipe4.gestsio.NewEtudiantActivity {
++ {static} String EXTRA_REPLY_NEW
+- EditText mEditNomView
+- EditText mEditPrenomView
+- EditText mEditNaissanceView
+- EditText mEditSpeView
+- EditText mEditAdresseView
+- EditText mEditCpView
+- EditText mEditVilleView
+- EditText mEditTelView
+- EditText mEditCourrielView
+- EditText mEditObservationsView
+- Etudiant etudiant
++ void onCreate(Bundle)
+}
+class fr.equipe4.gestsio.EtudiantViewModel {
+- EtudiantRepository mRepository
+- LiveData<List<Etudiant>> mAllEtudiants
+~ LiveData<List<Etudiant>> getAllEtudiants()
+~ void insert(Etudiant)
+~ void update(Etudiant)
++ void delete(Etudiant)
+}
+class fr.equipe4.gestsio.EtudiantListAdapter {
+- LayoutInflater mInflater
+- List<Etudiant> mEtudiants
+- Context mContext
++ EtudiantViewHolder onCreateViewHolder(ViewGroup,int)
++ void onBindViewHolder(EtudiantViewHolder,int)
+~ void setEtudiants(List<Etudiant>)
++ int getItemCount()
+}
+class fr.equipe4.gestsio.EtudiantListAdapter.EtudiantViewHolder {
+- TextView nomItemView
+- TextView prenomItemView
+- TextView naissanceItemView
++ {static} String EXTRA_REPLY_ETUDIANT_LA
++ void onClick(View)
+}
+class fr.equipe4.gestsio.ApiClient {
+- {static} String BASE_URL
+- {static} Retrofit retrofit
+~ {static} Retrofit getApiClient()
+}
+class fr.equipe4.gestsio.ViewEtudiantActivity {
+- TextView mTextViewNom
+- TextView mTextViewPrenom
+- TextView mTextViewNaissance
+- TextView mTextViewSpe
+- TextView mTextViewAdresse
+- TextView mTextViewCp
+- TextView mTextViewVille
+- TextView mTextViewTel
+- TextView mTextViewCourriel
+- TextView mTextViewObservations
+- TextView textViewResult
++ {static} String EXTRA_REPLY_VIEW
+# void onCreate(Bundle)
+- void loadEtudiant(Etudiant)
+# void onResume()
+}
+interface fr.equipe4.gestsio.ApiInterface {
+~ Call<List<Appreciation>> getAppreciations(int)
+}
+class fr.equipe4.gestsio.MainActivity {
++ {static} int NEW_ETUDIANT_ACTIVITY_REQUEST_CODE
++ {static} int UPDATE_ETUDIANT_ACTIVITY_REQUEST_CODE
++ {static} int RESULT_SUPP
+- EtudiantViewModel mEtudiantViewModel
+# void onCreate(Bundle)
++ void onActivityResult(int,int,Intent)
+}
+abstract class fr.equipe4.gestsio.EtudiantRoomDatabase {
+- {static} EtudiantRoomDatabase INSTANCE
+- {static} int NUMBER_OF_THREADS
+~ {static} ExecutorService databaseWriteExecutor
+- {static} Callback sRoomDatabaseCallback
++ {abstract}EtudiantDao etudiantDao()
+~ {static} EtudiantRoomDatabase getDatabase(Context)
+}
+class fr.equipe4.gestsio.Appreciation {
+- int idEtudiant
+- String observationEtudiant
++ int getIdEtudiant()
++ String getObservationEtudiant()
+}
+
+
+androidx.appcompat.app.AppCompatActivity <|-- fr.equipe4.gestsio.UpdateEtudiantActivity
+java.io.Serializable <|.. fr.equipe4.gestsio.Etudiant
+androidx.appcompat.app.AppCompatActivity <|-- fr.equipe4.gestsio.NewEtudiantActivity
+androidx.lifecycle.AndroidViewModel <|-- fr.equipe4.gestsio.EtudiantViewModel
+fr.equipe4.gestsio.Adapter <|-- fr.equipe4.gestsio.EtudiantListAdapter
+fr.equipe4.gestsio.EtudiantListAdapter +.. fr.equipe4.gestsio.EtudiantListAdapter.EtudiantViewHolder
+fr.equipe4.gestsio.OnClickListener <|.. fr.equipe4.gestsio.EtudiantListAdapter.EtudiantViewHolder
+fr.equipe4.gestsio.ViewHolder <|-- fr.equipe4.gestsio.EtudiantListAdapter.EtudiantViewHolder
+androidx.appcompat.app.AppCompatActivity <|-- fr.equipe4.gestsio.ViewEtudiantActivity
+androidx.appcompat.app.AppCompatActivity <|-- fr.equipe4.gestsio.MainActivity
+androidx.room.RoomDatabase <|-- fr.equipe4.gestsio.EtudiantRoomDatabase
+@enduml
